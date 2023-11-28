@@ -30,11 +30,14 @@ class loginpagestate extends State<loginpage>{
         isloading = true;
       });
       // login sucess //go to detail page
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) =>
-            NewsUi()),
-      );
+      //Navigator.push(
+       // context,
+       // MaterialPageRoute(builder: (context) =>
+           // NewsUI()),
+    Navigator.of(context).pushNamed('/NewsUI',arguments: false);
+
+
+
     }
 
   }
@@ -113,7 +116,7 @@ class loginpagestate extends State<loginpage>{
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) =>
-                                  NewsUi()),
+                                  NewsUI()),
                             );
                           }else{
                             //show error

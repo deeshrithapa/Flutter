@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:week2/RouteGen.dart';
 import 'package:week2/View/News/NewsUI.dart';
+import 'package:week2/View/maps/mappage.dart';
 
 import 'View/Auth/loginpage.dart';
 import 'View/Cart/CartPage.dart';
@@ -30,7 +32,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: loginpage(),
+      initialRoute: '/',
+      onGenerateRoute: RouteGen.generateRoute,
+      //home: MapSample(),
     );
   }
 }
